@@ -1,8 +1,5 @@
-import csv
-import re
-
+import csv,re
 result = 0
-
 with open('input.csv', newline='') as csvfile:
   reader = csv.reader(csvfile)
   for row in reader:
@@ -11,5 +8,4 @@ with open('input.csv', newline='') as csvfile:
       result += int(int(regexMatches[0] + regexMatches[len(regexMatches) - 1]))
     else:
       result += int(regexMatches[0] + regexMatches[0])
-    
 print(result)
